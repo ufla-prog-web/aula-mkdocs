@@ -9,7 +9,7 @@
   </a>
 </p>
 
-Aula de documentação técnica com MkDocs. Projeto usado para o ensino de documentações técnica com MkDocs para ser desenvolvido na Aula da disciplina GAC116 - Programação Web da UFLA.
+Aula de documentação técnica com MkDocs. Projeto usado para o ensino de documentação técnica com MkDocs para ser desenvolvido na Aula da disciplina GAC116 - Programação Web da UFLA.
 
 O objetivo desse projeto é criar uma página web de documentação técnica sobre o próprio MkDocs utilizando a ferramenta MkDocs. Os principais recursos disponíveis no MkDocs serão apresentados e, por fim, a página gerada será publicada no Github.
 
@@ -56,7 +56,7 @@ Caso deseje ao invês de clonar o repositório (método acima), baixe o reposit�
 
 ### Abrindo o Visual Studio Code
 
-Abra o IDE Visual Studio Code na pasta `aula-mkdocs`.
+Abra a IDE Visual Studio Code na pasta `aula-mkdocs`.
 
 **Dica:** Abra o arquivo `README.md` e clique em `Open Preview to the Side` para facilitar a construção da aplicação.
 
@@ -102,18 +102,10 @@ cd mkdocs
 
 ### Criando o Ambiente Virtual
 
-Crie o ambiente virtual com o `venv` para isolar as instalações Python:
-
-Unix/macOS
+Crie o ambiente virtual com o `venv` para isolar a instalação de dependências do Python:
 
 ```bash
 python3 -m venv venv
-```
-
-Windows
-
-```bash
-py -m venv venv
 ```
 
 Ative o ambiente virtual no seu computador utilizando o comando abaixo:
@@ -159,7 +151,7 @@ pip3 install -r requirements.txt
 
 ### Criando o Projeto da Documentação
 
-O desenvolvimento da documentação inicia-se com a criação do projeto com o mkdocs utilizando o comando abaixo.
+O desenvolvimento da documentação inicia-se com a criação do projeto com o mkdocs utilizando o comando abaixo:
 
 ```bash
 mkdocs new minha-docs-mkdocs
@@ -191,17 +183,17 @@ Após executar esse comando, acesso o endereço utilizando o navegador [http://1
 Para alterar a porta em que a documentação ficará disponível, utilize o comando abaixo:
 
 ```shell script
-mkdocs serve -a localhost:8050
+mkdocs serve -a localhost:9000
 ```
 
 ou
 
 ```shell script
 cd site
-python3 -m http.server 9000
+python3 -m http.server -b localhost 9000
 ```
 
-Após executar esse comando, acesse o endereço utilizando o navegador [http://0.0.0.0:9000/](http://0.0.0.0:9000/). Com essa forma de execução, apenas o site estático é acessado pelo navegador.
+Após executar esse comando, acesse o endereço utilizando o navegador [http://localhost:9000/](http://localhost:9000/). Com essa forma de execução, apenas o site estático é acessado pelo navegador.
 
 ### Personalizando a Documentação
 
@@ -247,7 +239,9 @@ O projeto em Mkdocs está organizado da seguiente maneira:
 
 Crie dentro da pasta `docs` uma pasta chamada `imgs`. Copie o arquivo `logo-mkdocs.png` da pasta `recursos` para a pasta `imgs` criada.
 
-Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+**ATENÇÃO:** Acesse a URL [http://localhost:9000/](http://localhost:9000/) caso tiver executado a alteração de porta
 
 ### Criando uma Nova Página
 
@@ -332,6 +326,8 @@ theme: readthedocs
 
 Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
+**ATENÇÃO:** Acesse a URL [http://localhost:9000/](http://localhost:9000/) caso tiver executado a alteração de porta
+
 ### Estilizando a Página
 
 Agora, iremos estilizar/personalizar ainda mais a página da documentação, para isso no final do arquivo `mkdocs.yml` adicone o seguinte conteúdo:
@@ -367,6 +363,8 @@ theme:
 
 Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
+**ATENÇÃO:** Acesse a URL [http://localhost:9000/](http://localhost:9000/) caso tiver executado a alteração de porta
+
 Para mais informações sobre cores e modo de exibição (claro - escuro) consulte [cores](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/).
 
 Para mais informações sobre favicon, consulte [favicon](https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon).
@@ -388,7 +386,7 @@ nav:
 ...
 ```
 
-Para que todos os exemplos funcionarem, é necessário incluir as seguintes extensões no arquivo `mkdocs.yml`.
+Para que todos os exemplos funcionem, é necessário incluir as seguintes extensões no arquivo `mkdocs.yml`:
 
 ```yaml
 ...
@@ -422,11 +420,13 @@ extra_javascript:
 
 Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
+**ATENÇÃO:** Acesse a URL [http://localhost:9000/](http://localhost:9000/) caso tiver executado a alteração de porta
+
 ### Analisando o Conteúdo de Recursos
 
 Analise o conteúdo do arquivo `recursos.md` para entender os exemplos. 
-Em seguida altere os exemplos lá existentes.
+Em seguida, altere os exemplos lá existentes.
 
 ## Próximas Etapas
 
-Agora, que você sabe como construir uma documentação de técnica. Utilize os conhecimentos e exemplos aqui apresentados para fazer o seu trabalho sobre tecnologia. Nesse trabalho, os aspectos mais importantes da tecnologia escolhida deverão ser documentados. Por fim, o relatório em forma de site deverá ser postado publicamente no github.
+Agora que você sabe como construir uma documentação de técnica, utilize os conhecimentos e exemplos aqui apresentados para fazer o seu trabalho sobre tecnologia. Nesse trabalho, os aspectos mais importantes da tecnologia escolhida deverão ser documentados. Por fim, o relatório em forma de site deverá ser postado publicamente no github.
