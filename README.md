@@ -92,6 +92,8 @@ Inicialmente, crie uma pasta do projeto (dentro da pasta `aula-mkdocs`):
 mkdir mkdocs
 ```
 
+A ideia desta pasta é armazenar o projeto em Python do MkDocs.
+
 ### Abrindo a Pasta do Projeto
 
 Navegue até a pasta `mkdocs`.
@@ -145,8 +147,6 @@ mkdocs==1.5.2
 mkdocs-autorefs==0.5.0
 mkdocs-material==9.2.7
 mkdocs-material-extensions==1.1.1
-mkdocstrings==0.23.0
-mkdocstrings-python==1.6.0
 ```
 
 ### Instalando as Dependências da Aplicação
@@ -166,6 +166,10 @@ mkdocs new minha-docs-mkdocs
 cd minha-docs-mkdocs
 ```
 
+A ideia desse comando é criar a aplicação com o MkDocs. Essa aplicação possui o nome `minha-docs-mkdocs`.
+
+Analise a pasta `minha-docs-mkdocs` criada, repare que possui uma pasta chamada `docs` e um arquivo chamado `mkdocs.yml`.
+
 ### Construindo a Documentação
 
 Utilize o comando abaixo para construir a documentação do projeto:
@@ -177,6 +181,8 @@ mkdocs build
 **OBS:** É necessário executar esse comando todas as vezes que houver modificação nos arquivos markdown da documentação.
 
 Esse comando cria uma pasta chamada `site` com todo o conteúdo do site dentro do projeto chamado `minha-docs-mkdocs`.
+
+Analise a estrutura de arquivos e diretórios da pasta `site`.
 
 ### Executando a Aplicação
 
@@ -247,13 +253,17 @@ O projeto em Mkdocs está organizado da seguiente maneira:
 
 Crie dentro da pasta `docs` uma pasta chamada `imgs`. Copie o arquivo `logo-mkdocs.png` da pasta `recursos` para a pasta `imgs` criada.
 
-Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+Execute o comando abaixo para executar novamente a aplicação:
 
-**ATENÇÃO:** Acesse a URL [http://localhost:9000/](http://localhost:9000/) caso tiver executado a alteração de porta.
+```bash
+mkdocs serve
+```
+
+Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
 ### Criando uma Nova Página
 
-Agora, iremos criar uma nova página na nossa documentação. Para isso faça o seguinte. Crie um arquivo chamado `introducao.md` dentro da pasta `docs`. Nesse arquivo, coloque o seguinte conteúdo.
+Agora, iremos criar uma nova página na nossa documentação. Para isso faça o seguinte. Crie um arquivo chamado `introducao.md` dentro da pasta `docs`. Nesse arquivo, coloque o seguinte conteúdo:
 
 ```markdown
 # Introdução
@@ -336,7 +346,7 @@ Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
 ### Estilizando a Página
 
-Agora, iremos estilizar/personalizar ainda mais a página da documentação, para isso no final do arquivo `mkdocs.yml` adicone o seguinte conteúdo:
+Agora, iremos estilizar/personalizar ainda mais a página da documentação, para isso no final do arquivo `mkdocs.yml` adicione o seguinte conteúdo:
 
 ```yml
 ...
@@ -366,6 +376,8 @@ theme:
     - content.tabs.link             # habilita o vinculo de guias de conteúdo
     - content.code.copy             # hbilita a cópia de códigos da página
 ```
+
+Copie o arquivo `favicon.ico` da pasta `recursos` para a pasta `imgs`.
 
 Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 

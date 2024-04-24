@@ -69,8 +69,8 @@ Você pode criar listas ordenadas colocando o número 1 seguido de ponto (.) no 
 1. Item 1
 1. Item 2
 1. Item 3
-  1. Item 3a
-  1. Item 3b
+1. Item 3a
+1. Item 3b
 ```
 
 **Saída:**
@@ -78,8 +78,8 @@ Você pode criar listas ordenadas colocando o número 1 seguido de ponto (.) no 
 1. Item 1
 1. Item 2
 1. Item 3
-  1. Item 3a
-  1. Item 3b
+1. Item 3a
+1. Item 3b
 
 ### Lista Não Ordenadas
 
@@ -117,7 +117,7 @@ Você pode adicionar links externos ao seu documento Markdown usando colchetes (
 
 ### Links Internos
 
-Você pode adicionar links internos ao seu documento Markdown usando colchetes ([]), seguidos de parênteses (()), que contêm a URL do link.
+Você pode adicionar links internos ao seu documento Markdown usando colchetes ([]), seguidos de parênteses (()), que contêm a URL do link. A URL deve vir precedida de `#` seguido do nome do título da seção trocando os espaços pelo hífen `-`.
 
 **Por exemplo:**
 
@@ -129,9 +129,9 @@ Você pode adicionar links internos ao seu documento Markdown usando colchetes (
 
 [link listas ordenadas](#lista-ordenadas)
 
-### Imagens
+### Imagens Externas
 
-Você pode adicionar imagens ao seu documento Markdown usando um ponto de exclamação (!) seguido de colchetes ([]), que contêm a descrição da imagem, seguido de parênteses (()), que contêm a URL da imagem.
+Você pode adicionar imagens externas ao seu documento Markdown usando um ponto de exclamação (!) seguido de colchetes ([]), que contêm a descrição da imagem, seguido de parênteses (()), que contêm a URL da imagem.
 
 **Por exemplo:**
 
@@ -142,6 +142,20 @@ Você pode adicionar imagens ao seu documento Markdown usando um ponto de exclam
 **Saída:**
 
 ![Logo do Google](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+
+### Imagens Internas
+
+Você pode adicionar imagens internas ao seu documento Markdown usando um ponto de exclamação (!) seguido de colchetes ([]), que contêm a descrição da imagem, seguido de parênteses (()), que contêm a URL local da imagem.
+
+**Por exemplo:**
+
+```
+![Logo Mkdocs](./imgs/logo-mkdocs.png)
+```
+
+**Saída:**
+
+![Logo Mkdocs](./imgs/logo-mkdocs.png)
 
 ### Tabelas
 
@@ -183,7 +197,6 @@ Você pode criar uma tabela utilizando de forma estrutura o símbolo pipe (|) co
 | `GET`       | Fetch resource  |
 | `PUT`       | Update resource |
 | `DELETE`    | Delete resource |
-
 
 **Por exemplo:** Alinhamento Centro
 
@@ -260,6 +273,19 @@ Você pode criar um bloco de código utilizando três crases seguidas ("```") no
 **Por exemplo:**
 
 ```
+"""
+def hello_world():
+  print("Hello, World!")
+
+hello_world()
+"""
+```
+
+**Observação:** trocar no exemplo acima as aspas por crases.
+
+**Saída:**
+
+```
 def hello_world():
   print("Hello, World!")
 
@@ -293,15 +319,20 @@ theme:
     - content.code.copy
 ```
 
-Você pode especificar a linguagem utilizada no código-fonte logo após as três primeiras crases. Exemplo de código em python.
+Você pode especificar a linguagem utilizada no código-fonte logo após as três primeiras crases (aspas nesse exemplo). Exemplo de código em python.
+
+**Por exemplo:**
 
 ```
-python
+"""python
 def hello_world():
   print("Hello, World!")
 
 hello_world()
+"""
 ```
+
+**Saída:**
 
 ```python
 def hello_world():
@@ -310,7 +341,7 @@ def hello_world():
 hello_world()
 ```
 
-Algumas das linguagens permitidas de espeficar são: bash, c, cpp, css, go, html, java, js, markdown, php, properties, python, sql, text, xml, yaml, json.
+Algumas das linguagens permitidas de espeficar são: **bash, c, cpp, css, go, html, java, js, markdown, php, properties, python, sql, text, xml, yaml, json**.
 
 Analise os exemplos a seguir.
 
@@ -688,35 +719,6 @@ graph LR
   B ---->|No| E[Yay!];
 ```
 
-**Diagrama de Sequência**
-
-```
-mermaid
-sequenceDiagram
-  autonumber
-  Alice->>John: Hello John, how are you?
-  loop Healthcheck
-      John->>John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts!
-  John-->>Alice: Great!
-  John->>Bob: How about you?
-  Bob-->>John: Jolly good!
-```
-
-```mermaid
-sequenceDiagram
-  autonumber
-  Alice->>John: Hello John, how are you?
-  loop Healthcheck
-      John->>John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts!
-  John-->>Alice: Great!
-  John->>Bob: How about you?
-  Bob-->>John: Jolly good!
-```
-
 **Diagrama de Classe**
 
 ``` 
@@ -778,6 +780,35 @@ classDiagram
   }
 ```
 
+**Diagrama de Sequência**
+
+```
+mermaid
+sequenceDiagram
+  autonumber
+  Alice->>John: Hello John, how are you?
+  loop Healthcheck
+      John->>John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John-->>Alice: Great!
+  John->>Bob: How about you?
+  Bob-->>John: Jolly good!
+```
+
+```mermaid
+sequenceDiagram
+  autonumber
+  Alice->>John: Hello John, how are you?
+  loop Healthcheck
+      John->>John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John-->>Alice: Great!
+  John->>Bob: How about you?
+  Bob-->>John: Jolly good!
+```
+
 Para mais informações sobre diagramas mermaid, consulte [https://squidfunk.github.io/mkdocs-material/reference/diagrams/](https://squidfunk.github.io/mkdocs-material/reference/diagrams/) e [https://mermaid.js.org/intro/](https://mermaid.js.org/intro/).
 
 ### Tabelas Ordenáveis
@@ -797,7 +828,9 @@ extra_javascript:
   - javascripts/tablesort.js
 ```
 
-Adicione também um arquivo javascript na pasta `docs/javascripts/tablesort.js` com o seguinte conteúdo:
+Crie uma pasta chamada `javascripts` dentro da pasta `docs`.
+
+Adicione um arquivo javascript chamado `tablesort.js` na pasta `docs/javascripts/` com o seguinte conteúdo:
 
 ```js
 document$.subscribe(function() {
@@ -810,52 +843,13 @@ document$.subscribe(function() {
 
 **Por exemplo:**
 
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :material-check:     Fetch resource  |
-| `PUT`       | :material-check-all: Update resource |
-| `DELETE`    | :material-close:     Delete resource |
+| Method      | Description     |
+| ----------- | --------------- |
+| `GET`       | Fetch resource  |
+| `PUT`       | Update resource |
+| `DELETE`    | Delete resource |
 
 Para mais informações sobre tabelas, consulte [https://squidfunk.github.io/mkdocs-material/reference/data-tables/](https://squidfunk.github.io/mkdocs-material/reference/data-tables/).
-
-### Icons e Emojis
-
-Uma das características do Material for MkDocs é a possibilidade de usar mais de 10.000 ícones e milhares de emojis na documentação do seu projeto com praticamente nenhum esforço adicional.
-
-Para isso, é necessário incluir no arquivo `mkdocs.yml` o seguinte conteúdo:
-
-```yaml
-markdown_extensions:
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-```
-
-**Por exemplo:**
-
-* Emojis:
-    * `:smile:` :smile:
-    * `:dragon:` :dragon:
-    * `:computer:` :computer:
-* Material Design
-    * `:material-git:` :material-git:
-    * `:material-ssh:` :material-ssh:
-    * `:material-web:` :material-web:
-* FontAwesome
-    * `:fontawesome-regular-face-laugh-wink:` :fontawesome-regular-face-laugh-wink:
-    * `:fontawesome-brands-youtube:` :fontawesome-brands-youtube:
-    * `:fontawesome-solid-computer:` :fontawesome-solid-computer:
-* Octicons
-    * `:octicons-heart-fill-24:` :octicons-heart-fill-24:
-    * `:octicons-goal-16:` :octicons-goal-16:
-    * `:octicons-cache-16:` :octicons-cache-16:
-* Simple Icons
-    * `:simple-github:` :simple-github:
-    * `:simple-google:` :simple-google:
-    * `:simple-facebook:` :simple-facebook:
-
-Para mais informações sobre ícones e emojis, consulte [https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/).
 
 ### Abreviações
 
