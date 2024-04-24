@@ -32,7 +32,6 @@ O objetivo desse projeto é criar uma página web de documentação técnica sob
 
 * mkdocs - [link](https://www.mkdocs.org/)
 * mkdocs-material - [link](https://squidfunk.github.io/mkdocs-material/)
-* mkdocstrings - [link](https://mkdocstrings.github.io/)
 
 ## Objetivo da Aula
 
