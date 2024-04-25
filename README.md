@@ -424,9 +424,6 @@ markdown_extensions:
   - pymdownx.tabbed:            # usado para guias de conteúdo
       alternate_style: true     # usado para guias de conteúdo
   - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
