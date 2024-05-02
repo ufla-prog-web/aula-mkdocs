@@ -9,31 +9,50 @@
   </a>
 </p>
 
+## Índice
+
+* [Introdução](#introdução)
+* [Recursos Utilizados](#recursos-utilizados)
+* [Objetivo da Aula](#objetivo-da-aula)
+* [Desenvolvimento do Projeto](#desenvolvimento-do-projeto)
+* [Próximas Etapas](#próximas-etapas)
+* [Créditos e Referências](#créditos-e-referências)
+
+## Introdução
+
 Aula de documentação técnica com MkDocs. Projeto usado para o ensino de documentação técnica com MkDocs para ser desenvolvido na Aula da disciplina GAC116 - Programação Web da UFLA.
 
 O objetivo desse projeto é criar uma página web de documentação técnica sobre o próprio MkDocs utilizando a ferramenta MkDocs. Os principais recursos disponíveis no MkDocs serão apresentados e, por fim, a página gerada será publicada no Github.
 
-## Linguagens Utilizadas
+A aula está estruturada em forma de tutorial, de forma que cada estudante vá replicando em seu computador os conceitos e recursos aqui mostrados. A aula mostra a evolução do código para que os estudantes possa compreender como as coisas se conectam.
 
-* Markdown - [link](https://www.markdownguide.org/)
-* MkDocs - [link](https://www.mkdocs.org)
-* Mermaid - [link](https://mermaid.js.org/intro/)
+## Recursos Utilizados
 
-## Ferramentas Utilizadas
+A seguir estão listados os principais recursos utilizados no desenvolvimento desta aula.
 
-* Visual Studio Code - [link](https://code.visualstudio.com/)
-* Python - [link](https://www.python.org/)
-* Pip - [link](https://pypi.org/project/pip/)
-* Venv - [link](https://docs.python.org/pt-br/3/library/venv.html)
-* Git - [link](https://git-scm.com/)
-* Github - [link](https://github.com/)
+### Linguagens
 
-## Bibliotecas Python Utilizadas
+* Markdown - Linguagem de Marcação Simples - [link](https://www.markdownguide.org/)
+* MkDocs - MkDocs é um Gerador de Sites Estáticos com Markdown - [link](https://www.mkdocs.org)
+* Mermaid - Ferramenta de Diagramação e Gráficos - [link](https://mermaid.js.org/intro/)
+
+### Bibliotecas
 
 * mkdocs - [link](https://www.mkdocs.org/)
 * mkdocs-material - [link](https://squidfunk.github.io/mkdocs-material/)
 
+### Ferramentas
+
+* Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
+* Python - [link](https://www.python.org/)
+* Pip - Gerenciador de Pacotes do Python - [link](https://pypi.org/project/pip/)
+* Venv - Ambiente Virtual do Python - [link](https://docs.python.org/pt-br/3/library/venv.html)
+* Git - Sistema de Controle de Versão - [link](https://git-scm.com/)
+* Github - Plataforma de Hospedagem de Códigos - [link](https://github.com/)
+
 ## Objetivo da Aula
+
+O objetivo da aula é apresentar uma introdução a documentação técnica com o MkDocs. Assim, os fundamentos para construção de documentação em formato de página web com essa ferramenta será abordado.
 
 A animação abaixo mostra de forma visual o resultado esperado nesta aula.
 
@@ -441,3 +460,11 @@ Em seguida, altere os exemplos lá existentes.
 ## Próximas Etapas
 
 Agora que você sabe como construir uma documentação de técnica, utilize os conhecimentos e exemplos aqui apresentados para fazer o seu trabalho sobre tecnologia. Nesse trabalho, os aspectos mais importantes da tecnologia escolhida deverão ser documentados. Por fim, o relatório em forma de site deverá ser postado publicamente no github.
+
+## Créditos e Referências
+
+Este tutorial foi inspirado nos seguintes recursos:
+
+* [Documentação oficial do MkDocs](https://www.mkdocs.org)
+* [Documentação oficial do MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
+* [Documentação oficial do Mermaid](https://mermaid.js.org/intro/)
